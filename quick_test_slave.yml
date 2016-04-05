@@ -1,6 +1,7 @@
 ---
 reporting:
   - module: blazemeter
+    test: godaddysites.com
 
 execution:
 - concurrency: 100
