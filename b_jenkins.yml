@@ -4,6 +4,6 @@ settings:
   
   modules:
     blazemeter:
-	  browser-open: false
-	console:
-	  disable: true
+      browser-open: false
+    console:
+      disable: true
