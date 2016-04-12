@@ -1,6 +1,6 @@
 ---
 reporting:
-  - module: blazemeter
+  - module:
     test: godaddysites.com
 
 execution:
