@@ -25,4 +25,3 @@ scenarios:
   quick-test:
     requests:
     - http://godaddy.com
-	
