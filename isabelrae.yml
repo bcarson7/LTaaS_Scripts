@@ -17,7 +17,7 @@ reporting:
       - avg-rt>5s for 1m, continue as failed
 
 execution:
-- concurrency: 1000
+- concurrency: 500
   ramp-up: 10m
   hold-for: 0m
   scenario: quick-test
