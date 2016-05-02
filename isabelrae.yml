@@ -20,7 +20,7 @@ execution:
 - concurrency: 1000
   ramp-up: 10m
   hold-for: 0m
-  scenario: isabelrae.com
+  scenario: isabelrae
 
 scenarios:
   quick-test:
