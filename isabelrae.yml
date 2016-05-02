@@ -1,0 +1,28 @@
+---
+modules:
+  blazemeter:
+    token: 22bd1093fef21456da74
+    browser-open: false
+
+reporting:
+  - module: blazemeter
+    test: Taurus godaddy.com
+  - module: final_stats
+  - module: junit-xml
+    filename: ./junit.xml
+    data-source: pass-fail
+  - module: fail-criteria
+    criterias:
+      - avg-rt>6000ms for 10s, continue as failed
+      - avg-rt>5s for 1m, continue as failed
+
+execution:
+- concurrency: 1000
+  ramp-up: 10m
+  hold-for: 0m
+  scenario: isabelrae.com
+
+scenarios:
+  quick-test:
+    requests:
+    - http://isabelrae.com
