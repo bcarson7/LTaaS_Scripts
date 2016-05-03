@@ -18,8 +18,8 @@ reporting:
 
 execution:
 - concurrency: 500
-  ramp-up: 10m
-  hold-for: 0m
+  ramp-up: 5m
+  hold-for: 1m
   scenario: quick-test
 
 scenarios:
