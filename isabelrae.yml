@@ -28,6 +28,5 @@ scenarios:
   isabelrae:
     requests:
     - http://isabelrae.com
-  get-requests:
     think-time: 3000ms
     retrieve-resources: false
