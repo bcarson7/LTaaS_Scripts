@@ -22,9 +22,12 @@ execution:
 - concurrency: 1000
   ramp-up: 5m
   hold-for: 1m
-  scenario: quick-test
+  scenario: isabelrae
 
 scenarios:
-  quick-test:
+  isabelrae:
     requests:
     - http://isabelrae.com
+  get-requests:
+    think-time: 3000ms
+    retrieve-resources: false
