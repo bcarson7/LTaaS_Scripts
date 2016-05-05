@@ -15,18 +15,18 @@ reporting:
     data-source: pass-fail
   - module: fail-criteria
     criterias:
-      - avg-rt>6000ms for 10s, continue as failed
-      - avg-rt>5s for 1m, continue as failed
+      - avg-rt>3000ms for 10s, continue as failed
+      - avg-rt>4s for 1m, continue as failed
 
 execution:
-- concurrency: 2000
+- concurrency: 100
   ramp-up: 5m
   hold-for: 1m
-  scenario: isabelrae
+  scenario: godaddy
 
 scenarios:
-  isabelrae:
+  godaddy:
     requests:
-    - http://isabelrae.com
-    think-time: 3000ms
+    - http://godaddy.com
+    think-time: 1000ms
     retrieve-resources: false
