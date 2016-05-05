@@ -15,8 +15,8 @@ reporting:
     data-source: pass-fail
   - module: fail-criteria
     criterias:
-      - avg-rt>3000ms for 10s, continue as failed
-      - avg-rt>4s for 1m, continue as failed
+      - avg-rt>4000ms for 10s, continue as failed
+      - avg-rt>3s for 1m, continue as failed
 
 execution:
 - concurrency: 100
