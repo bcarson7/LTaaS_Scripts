@@ -8,7 +8,7 @@ modules:
 
 reporting:
   - module: blazemeter
-    test: Taurus godaddy.com
+    test: Taurus isabelrae.com
   - module: final_stats
   - module: junit-xml
     filename: ./junit.xml
@@ -22,11 +22,11 @@ execution:
 - concurrency: 100
   ramp-up: 5m
   hold-for: 1m
-  scenario: godaddy
+  scenario: isabelrae
 
 scenarios:
-  godaddy:
+  isabelrae:
     requests:
-    - http://godaddy.com
-    think-time: 1000ms
+    - http://isabelrae.com
+    think-time: 3000ms
     retrieve-resources: false
