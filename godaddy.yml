@@ -27,6 +27,7 @@ execution:
 scenarios:
   godaddy:
     requests:
-    - http://godaddy.com
+    - https://godaddy.com
+    - https://www.godaddy.com/websites/free-domain
     think-time: 1000ms
     retrieve-resources: false
