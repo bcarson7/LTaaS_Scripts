@@ -10,6 +10,8 @@ reporting:
   - module: blazemeter
     test: Taurus godaddy.com
   - module: final_stats
+  - module: console
+    disable: true
   - module: junit-xml
     filename: ./junit.xml
     data-source: pass-fail
