@@ -21,7 +21,7 @@ reporting:
       - avg-rt>3s for 1m, continue as failed
 
 execution:
-- concurrency: 50
+- concurrency: 10
   ramp-up: 3m
   hold-for: 1m
   scenario: godaddy
