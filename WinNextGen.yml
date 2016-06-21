@@ -1,0 +1,32 @@
+---
+modules:
+  blazemeter:
+    token: 22bd1093fef21456da74
+    browser-open: false
+  jmeter:
+    memory-xmx: 8G
+
+reporting:
+  - module: blazemeter
+    test: Taurus isabelrae.com
+  - module: final_stats
+  - module: junit-xml
+    filename: ./junit.xml
+    data-source: pass-fail
+  - module: fail-criteria
+    criterias:
+      - avg-rt>4000ms for 10s, continue as failed
+      - avg-rt>3s for 1m, continue as failed
+
+execution:
+- concurrency: 2000
+  ramp-up: 5m
+  hold-for: 1m
+  scenario: isabelrae
+
+scenarios:
+  isabelrae:
+    requests:
+    - http://isabelrae.com
+    think-time: 3000ms
+    retrieve-resources: false
