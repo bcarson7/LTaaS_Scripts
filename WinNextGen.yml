@@ -8,7 +8,7 @@ modules:
 
 reporting:
   - module: blazemeter
-    test: Taurus isabelrae.com
+    test: WinNextGen
   - module: final_stats
   - module: junit-xml
     filename: ./junit.xml
@@ -22,11 +22,11 @@ execution:
 - concurrency: 2000
   ramp-up: 5m
   hold-for: 1m
-  scenario: isabelrae
+  scenario: WinNextGen
 
 scenarios:
-  isabelrae:
+  WinNextGen:
     requests:
-    - http://isabelrae.com
+    - http://.com
     think-time: 3000ms
     retrieve-resources: false
