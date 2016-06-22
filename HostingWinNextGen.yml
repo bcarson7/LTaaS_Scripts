@@ -8,7 +8,7 @@ modules:
 
 reporting:
   - module: blazemeter
-    test: WinNextGen
+    test: HostingWinNextGen
   - module: final_stats
   - module: junit-xml
     filename: ./junit.xml
@@ -22,10 +22,10 @@ execution:
 - concurrency: 2000
   ramp-up: 5m
   hold-for: 1m
-  scenario: WinNextGen
+  scenario: HostingWinNextGen
 
 scenarios:
-  WinNextGen:
+  HostingWinNextGen:
     requests:
     - http://.com
     think-time: 3000ms
