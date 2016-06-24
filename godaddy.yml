@@ -3,6 +3,8 @@ modules:
   blazemeter:
     token: 22bd1093fef21456da74
     browser-open: false
+  console:
+    disable: true
   jmeter:
     memory-xmx: 8G
 
@@ -10,8 +12,6 @@ reporting:
   - module: blazemeter
     test: Taurus godaddy.com
   - module: final_stats
-  - module: console
-    disable: true
   - module: junit-xml
     filename: ./junit.xml
     data-source: pass-fail
