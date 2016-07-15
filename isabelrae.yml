@@ -8,25 +8,25 @@ modules:
 
 reporting:
   - module: blazemeter
-    test: Taurus isabelrae.com
+    test: Taurus ouragilelife.com
   - module: final_stats
   - module: junit-xml
     filename: ./junit.xml
     data-source: pass-fail
   - module: fail-criteria
     criterias:
-      - avg-rt>4000ms for 10s, continue as failed
-      - avg-rt>3s for 1m, continue as failed
+      - avg-rt>1000ms for 10s, continue as failed
+      - avg-rt>1s for 1m, continue as failed
 
 execution:
 - concurrency: 2000
   ramp-up: 5m
-  hold-for: 1m
-  scenario: isabelrae
+  hold-for: 0m
+  scenario: ouragilelife
 
 scenarios:
-  isabelrae:
+  ouragilelife:
     requests:
-    - http://isabelrae.com
-    think-time: 3000ms
+    - http://ouragilelife.com
+    think-time: 1000ms
     retrieve-resources: false
