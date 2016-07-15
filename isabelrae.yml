@@ -29,4 +29,4 @@ scenarios:
     requests:
     - http://ouragilelife.com
     think-time: 1000ms
-    retrieve-resources: false
+    retrieve-resources: true
