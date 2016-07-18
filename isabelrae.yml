@@ -8,7 +8,7 @@ modules:
 
 reporting:
   - module: blazemeter
-    test: Taurus ouragilelife.com
+    test: Taurus isabelrae.com
   - module: final_stats
   - module: junit-xml
     filename: ./junit.xml
@@ -21,12 +21,12 @@ reporting:
 execution:
 - concurrency: 2000
   ramp-up: 5m
-  hold-for: 0m
-  scenario: ouragilelife
+  hold-for: 1m
+  scenario: isabelrae
 
 scenarios:
-  ouragilelife:
+  isabelrae:
     requests:
-    - http://ouragilelife.com
+    - http://isabelrae.com
     think-time: 1000ms
     retrieve-resources: true
