@@ -32,3 +32,17 @@ scenarios:
     - http://godaddy.com
     think-time: 1000ms
     retrieve-resources: false
+  
+services:
+- module: monitoring
+  server-agent:
+  - address: 10.32.45.94:4444
+    metrics:
+    - cpu
+    - disks
+    - exec
+    - jmx
+    - memory
+    - network
+    - swap
+    - tail
