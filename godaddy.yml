@@ -40,9 +40,9 @@ services:
     metrics:
     - cpu
     - disks
-    - exec
-    - jmx
     - memory
-    - network
-    - swap
-    - tail
+    #- exec
+    #- jmx
+    #- network
+    #- swap
+    #- tail
