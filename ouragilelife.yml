@@ -13,10 +13,10 @@ reporting:
   - module: junit-xml
     filename: ./junit.xml
     data-source: pass-fail
-  - module: fail-criteria
-    criterias:
-      - avg-rt>1000ms for 10s, continue as failed
-      - avg-rt>1s for 1m, continue as failed
+#  - module: fail-criteria
+#    criterias:
+#      - avg-rt>1000ms for 10s, continue as failed
+#      - avg-rt>1s for 1m, continue as failed
 
 execution:
 - concurrency: 2000
