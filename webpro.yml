@@ -1,0 +1,32 @@
+---
+modules:
+  blazemeter:
+    token: 22bd1093fef21456da74
+    browser-open: false
+  console:
+    disable: true
+  jmeter:
+    memory-xmx: 8G
+reporting:
+  - module: blazemeter
+    test: Taurus webpro
+  - module: final_stats
+  - module: junit-xml
+    filename: ./junit.xml
+    data-source: pass-fail
+  #- module: fail-criteria
+  #  criterias:
+  #    - avg-rt>4000ms for 10s, continue as failed
+  #    - avg-rt>3s for 1m, continue as failed
+
+execution:
+- concurrency: 100
+  ramp-up: 10m
+  hold-for: 5m
+  scenario: webpro
+scenarios:
+  webpro:
+    requests:
+    - https://test-godaddy.pro
+    think-time: 1000ms
+    retrieve-resources: false
