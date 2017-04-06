@@ -1,0 +1,19 @@
+---
+modules:
+  blazemeter:
+    token: 22bd1093fef21456da74
+    browser-open: false
+
+execution:
+- concurrency: 1
+  ramp-up: 1m
+  hold-for: 4m
+  scenario: gdlocker_get_object
+
+scenarios:
+  gdlocker_get_object:
+    headers:
+    X-Security-User: 'btables'
+    X-Security-Group: '2a59b6e66ff0fe40a01fcf164b3ee487'
+    requests:
+    - https://gdl.int.test-godaddy.com/v1/LoadTestLocker/
