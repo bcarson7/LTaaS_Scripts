@@ -3,17 +3,37 @@ modules:
   blazemeter:
     token: 22bd1093fef21456da74
     browser-open: false
+  console:
+    disable: false
 
 execution:
 - concurrency: 1
-  ramp-up: 1m
-  hold-for: 4m
+  #ramp-up: 1m
+  #hold-for: 4m
+  iterations: 10
   scenario: gdlocker_get_object
 
 scenarios:
   gdlocker_get_object:
     headers:
-    X-Security-User: 'btables'
-    X-Security-Group: '2a59b6e66ff0fe40a01fcf164b3ee487'
+      SSLClientCertificateFile: 'gdl.perfclient.int.dev-godaddy.com.pem'
+      SSLClientCertificatePassword: 'Putter'
+      #cert: '/gdl.perfclient.int.dev-godaddy.com.crt'
+      #key: '/gdl.perfclient.int.dev-godaddy.com.key'
+      #SSLClientCertificatePassword: 'Putter'
+      X-Security-User: 'btables'
+      X-Security-Group: '2a59b6e66ff0fe40a01fcf164b3ee487'
+    retrieve-resources: true
     requests:
-    - https://gdl.int.test-godaddy.com/v1/LoadTestLocker/
+      - https://gdl.int.test-godaddy.com/v1/LoadTestLocker/
+    think-time: 1000ms
+
+reporting:
+  - module: final-stats
+  - module: console
+
+settings:
+  check-interval: 5s
+  default-executor: jmeter
+
+provisioning: local
