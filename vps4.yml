@@ -1,0 +1,24 @@
+---
+modules:
+  blazemeter:
+    token: 22bd1093fef21456da74
+    browser-open: false
+
+reporting:
+  - module: blazemeter
+    test: vps4
+
+execution:
+- concurrency: 250
+  ramp-up: 10m
+  hold-for: 5m
+  scenario: vps4
+
+scenarios:
+ vps4:
+    requests:
+    - https://vps4.api.dev-godaddy.com/api/vms/
+    - https://vps4.api.dev-godaddy.com/api/credits/
+    headers:
+      Content-Type: "application/json"
+      Authorization: "sso-jwt eyJhbGciOiAiUlMyNTYiLCAia2lkIjogIkVqaTVfc01yaVEifQ.eyJhdXRoIjogImJhc2ljIiwgImZhY3RvcnMiOiB7ImtfcHciOiAxNDk1ODExOTMwfSwgImZpcnN0bmFtZSI6ICJXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXVyIsICJmdGMiOiAxLCAiaGJpIjogMTQ5NTgxMTkzMCwgImlhdCI6IDE0OTU4MTE5MzAsICJqdGkiOiAiRlcyNWVYaGJMc01fdGx3elIzRENnUSIsICJsYXN0bmFtZSI6ICJCZWF1Y2hhbXAiLCAicGxpZCI6ICIxIiwgInNob3BwZXJJZCI6ICIxMDY3NzY3IiwgInR5cCI6ICJpZHAiLCAidXNlcm5hbWUiOiAiamFyZWRkZXYwNTEyMTcifQ.lOtPvvASqxMIQjChh4_os8lBjCvsvL7yy-2xldjUxSUVzXf6bOlez_73-Sq71PcU4ellkbD8wBDt1wLyo0Z0IOR6j_enCL68LRAQqnL_lcpsojBBp93HRuroRX-ulHCbGtHQEsS1Xl_L9d5FADn7tkP_NkiiUTD7LJlDwMpOJ08"
