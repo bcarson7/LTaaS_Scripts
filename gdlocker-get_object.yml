@@ -1,10 +1,10 @@
 ---
 modules:
   blazemeter:
-    token: 22bd1093fef21456da74
+    #token: 22bd1093fef21456da74 #commenting out due to script errors
     browser-open: false
   console:
-    disable: false
+    disable: true
 
 execution:
 - concurrency: 1
