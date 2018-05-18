@@ -3,20 +3,22 @@ modules:
   blazemeter:
     token: 22bd1093fef21456da74
     browser-open: false
+  console:
+    disable: true
 
 reporting:
   - module: blazemeter
-    test: dps-ssl
+    test: dps
 
 execution:
-- concurrency: 1
-  iterations: 1
+- concurrency: 250
+  #iterations: 1
   ramp-up: 5m
   hold-for: 25m
-  scenario: dps-ssl
+  scenario: dps
 
 scenarios:
-  dps-ssl:
+  dps:
     retrieve-resources: true
     requests:
-    - https://dpssslloadtest.info/
+    - http://sisterfinder.net/
