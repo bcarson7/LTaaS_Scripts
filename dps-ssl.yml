@@ -1,7 +1,7 @@
 ---
 modules:
   blazemeter:
-    #token: 22bd1093fef21456da74
+    token: 22bd1093fef21456da74
     browser-open: false
 
 reporting:
