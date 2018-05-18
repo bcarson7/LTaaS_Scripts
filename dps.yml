@@ -1,0 +1,22 @@
+---
+modules:
+  blazemeter:
+    #token: 22bd1093fef21456da74
+    browser-open: false
+
+reporting:
+  - module: blazemeter
+    test: dps-ssl
+
+execution:
+- concurrency: 1
+  iterations: 1
+  ramp-up: 5m
+  hold-for: 25m
+  scenario: dps-ssl
+
+scenarios:
+  dps-ssl:
+    retrieve-resources: true
+    requests:
+    - https://dpssslloadtest.info/
