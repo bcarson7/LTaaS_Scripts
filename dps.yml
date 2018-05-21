@@ -12,7 +12,7 @@ reporting:
 
 execution:
 - concurrency: 250
-  #iterations: 1
+  iterations: 1
   ramp-up: 5m
   hold-for: 25m
   scenario: dps
